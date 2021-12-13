@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>疫情实时数据平台</title>
+    <script type="text/javascript" src="{{static_url('js/jquery.min.js')}}"></script>
+    <script type="text/javascript" src="{{static_url('js/jquery.shCircleLoader-min.js')}}"></script>
+</head>
+
+<body style="background-color: 	#FFDAB9;">
+    <div id="show_time" style="text-indent:1.5%;height: 10%;width: 20%; float: left;">
+        <script>
+            //这里代码多了几行，但是不会延迟显示，速度比较好，格式可以自定义，是理想的时间显示
+            setInterval("fun(show_time)", 1);
+            function fun(timeID) {
+                var date = new Date();  //创建对象  
+                var y = date.getFullYear();     //获取年份  
+                var m = date.getMonth() + 1;   //获取月份  返回0-11  
+                var d = date.getDate(); // 获取日  
+                var w = date.getDay();   //获取星期几  返回0-6   (0=星期天) 
+                var ww = ' 星期' + '日一二三四五六'.charAt(new Date().getDay());//星期几
+                var h = date.getHours();  //时
+                var minute = date.getMinutes()  //分
+                var s = date.getSeconds(); //秒
+                var sss = date.getMilliseconds(); //毫秒
+                if (m < 10) {
+                    m = "0" + m;
+                }
+                if (d < 10) {
+                    d = "0" + d;
+                }
+                if (h < 10) {
+                    h = "0" + h;
+                }
+
+                if (minute < 10) {
+                    minute = "0" + minute;
+                }
+
+                if (s < 10) {
+                    s = "0" + s;
+                }
+
+                document.getElementById(timeID.id).innerHTML = y + "-" + m + "-" + d + "   " + h + ":" + minute + ":" + s + "  " + ww;
+                //document.write(y+"-"+m+"-"+d+"   "+h+":"+minute+":"+s);  
+            }
+        </script>
+    </div>
+    <div style="float: right;margin-top: 0%; margin-right: 2%; font-family: 宋体; font-weight: bold;">
+        <p style="font-size: 100%;line-height: 0%; text-align: right;; color: #00BFFF;">木易的博客</p>
+        <p style="font-size: 150%;line-height: 10%; color: rgb(182, 48, 48);">导航:
+            <a href="/yiqing" style="color: rgb(182, 48, 48); text-decoration: none;">中国疫情</a>/<a href="/yiqingworld"
+                style="color: rgb(182, 48, 48); text-decoration: none;">全球疫情</a>
+        </p>
+    </div>
+    {% raw x['html'] %}
+    <div style="float: right; margin-right: 2%;margin-top: 40%;">
+        <p style="font-size: 90%; font-family: 宋体;">数据来源：腾讯、丁香园</p>
+    </div>
+</body>
+<script type="text/javascript" src="{{static_url('js/jquery.animsition.js')}}"></script>
+<script type="text/javascript" src="{{static_url('js/jquery.nicescroll.js')}}"></script>
+<script type="text/javascript" src="{{static_url('js/updatec.js')}}"></script>
+
+</html>
