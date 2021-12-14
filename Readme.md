@@ -20,21 +20,23 @@
 ### 四、操作说明
 * 安装mysql数据库  
     > 1.创建一个数据库  
+* 配置python环境
+    > 2.安装python3.8，并安装相应模块（requirements.txt）
 * data文件夹，数据爬取和存储
-    > 2.更改连接数据库配置文件：  
+    > 3.更改连接数据库配置文件：  
         &ensp;&ensp;./data/link.py,  
         &ensp;&ensp;./data/数据库建模/link.py,  
         &ensp;&ensp;./data/updatasql.py,  
         &ensp;&ensp;./app/settings.py。  
         (user：数据库用户名，password：数据库登录密码，dbname：数据库名)  
-    > 3.创建数据表，运行数据库建模中所有文件  
-    > 4.运行get_china_url.py和get_world_url.py获取丁香园数据接口  
-    > 5.运行get_china_data.py和get_world_data.py获取疫情历史数据（过程可能较慢，需一个小时左右）  
-    > 6.运行全get_today_data获取当天数据  
-    > 7.运行updatesql.py更新数据表（第一次运行后注释掉36行sums()切记！！！）  
-    > 8.每天定时运行get_today_data.py即可获取最新数据  
-    > 9.每天23:55运行updatessql.py更新数据表（将今天最终数据加入到总体数据中）  
+    > 4.创建数据表，运行数据库建模中所有文件  
+    > 5.运行get_china_url.py和get_world_url.py获取丁香园数据接口  
+    > 6.运行get_china_data.py和get_world_data.py获取疫情历史数据（过程可能较慢，需一个小时左右）  
+    > 7.运行全get_today_data获取当天数据  
+    > 8.运行updatesql.py更新数据表（第一次运行后注释掉36行sums()切记！！！）  
+    > 9.每天定时运行get_today_data.py即可获取最新数据  
+    > 10.每天23:55运行updatessql.py更新数据表（将今天最终数据加入到总体数据中）  
 * app文件夹，服务器搭建可视化展示
-    > 10.运行manager.py启动服务器，浏览器输入127.0.0.1:8800/yiqing访问页面。
+    > 11.运行manager.py启动服务器，浏览器输入127.0.0.1:8800/yiqing访问页面。
   
 
