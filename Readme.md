@@ -2,8 +2,8 @@
 ### 一、概述
 ##### 制作人：风船野 
 ##### 联系方式：2635078557@qq.com
-##### 中国疫情实时：  
-##### 全球疫情实时：
+##### 中国疫情实时：[http://www.xyaya.xyz/yiqing](http://www.xyaya.xyz/yiqing)  
+##### 全球疫情实时：[http://www.xyaya.xyz/yiqingworld](http://www.xyaya.xyz/yiqing)
 ### 二、功能
 * 对中国疫情和全球疫情进行实时的数据跟踪
 * 对疫情数据进行数据处理存储
