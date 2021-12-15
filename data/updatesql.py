@@ -33,5 +33,5 @@ def uptoday():
     conn.close()
 
 
-#sums()  #注意 sums函数只执行一次
+sums()  #注意 sums函数只执行一次
 uptoday()
